@@ -55,7 +55,7 @@ export class HomeComponent {
       image: 'assets/deep-cleaning.jpg',
       title: 'DEEP CLEANING',
       description:
-        'Thorough deep cleaning services for a completely refreshed space.',
+        'Thorough deep cleaning services for a completely refreshed smelling fresh space.',
     },
   ];
 
