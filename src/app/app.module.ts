@@ -9,6 +9,8 @@ import { ServicesComponent } from './pages/services/services.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { WelcomePageComponent } from './pages/welcome-page/welcome-page.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -18,13 +20,11 @@ import { FooterComponent } from './components/footer/footer.component';
     ServicesComponent,
     ContactUsComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    WelcomePageComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
