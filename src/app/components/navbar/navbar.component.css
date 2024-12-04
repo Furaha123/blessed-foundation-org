@@ -9,11 +9,7 @@ a {
   transition: all 0.3s ease;
 }
 
-/* Optional: Add a subtle shadow on scroll */
-nav.scrolled {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
+
 .logo {
   display: inline-block;
   background-color: #ffd95a;
@@ -27,4 +23,12 @@ nav.scrolled {
 
 .logo-text {
   margin-left: 30px;
+}
+nav {
+  transition: background-color 0.3s ease;
+}
+
+.mobile-menu {
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
