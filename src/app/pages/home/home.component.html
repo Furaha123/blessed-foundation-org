@@ -32,16 +32,13 @@
         background-position: center;
       "
     >
-      <!-- Overlay -->
       <div class="absolute inset-0 bg-black opacity-50"></div>
 
-      <!-- Content -->
       <div class="relative z-10 container mx-auto px-4">
         <h2 class="text-3xl font-bold mb-4">NOTHING IS MORE IMPORTANT</h2>
         <div class="w-36 h-1 bg-[#daa533] mx-auto mb-6"></div>
         <p class="mb-12">We prioritize the following.</p>
 
-        <!-- Icons Grid -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <div class="text-center">
             <img
@@ -96,7 +93,7 @@
             *ngFor="
               let service of services.slice(currentSlide, currentSlide + 3)
             "
-            class="bg-white rounded-lg overflow-hidden shadow-lg"
+            class="bg-white rounded-lg overflow-hidden"
           >
             <img
               [src]="service.image"
