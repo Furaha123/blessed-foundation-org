@@ -60,4 +60,7 @@ export class HomeComponent {
   ];
 
   currentSlide = 0;
+  onLearnMore() {
+    // Add your navigation or action logic here
+  }
 }

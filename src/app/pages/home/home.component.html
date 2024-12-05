@@ -78,7 +78,7 @@
         </p>
       </div>
     </div>
-    <div class="bg-gray-50 py-16">
+    <div class="py-16">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold">OUR CLEANING SERVICES</h2>
@@ -101,7 +101,10 @@
               class="w-full h-64 object-cover"
             />
             <div class="p-6">
-              <h3 class="text-xl font-bold mb-2">{{ service.title }}</h3>
+              <h3 class="text-lg font-bold mb-2 text-center">
+                {{ service.title }}
+              </h3>
+              <div class="w-20 h-1 bg-[#daa533] mx-auto mt-1"></div>
               <p class="text-gray-600">{{ service.description }}</p>
             </div>
           </div>
@@ -115,6 +118,62 @@
             class="w-3 h-3 rounded-full"
             (click)="currentSlide = i * 2"
           ></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mx-auto px-4 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <!-- Left side - Images grid -->
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <img
+              src="assets/about-1.jpg"
+              alt="Upholstery Cleaning"
+              class="w-full h-48 object-cover rounded-lg"
+            />
+          </div>
+          <div>
+            <img
+              src="assets/about-2.jpg"
+              alt="Clean Home Interior"
+              class="w-full h-48 object-cover rounded-lg"
+            />
+          </div>
+          <div>
+            <img
+              src="assets/about.jpg"
+              alt="Window Cleaning"
+              class="w-full h-48 object-cover rounded-lg"
+            />
+          </div>
+          <div>
+            <img
+              src="assets/about-3.jpg"
+              alt="Clean Kitchen"
+              class="w-full h-48 object-cover rounded-lg"
+            />
+          </div>
+        </div>
+
+        <div class="text-center md:text-left">
+          <h2 class="text-3xl font-bold mb-4">ABOUT OUR COMPANY</h2>
+          <div class="w-36 h-1 bg-[#daa533] mb-6 md:mx-0 mx-auto"></div>
+          <h3 class="text-xl mb-6">Exceptional level of cleaning services.</h3>
+          <p class="text-gray-600 mb-8">
+            Founded in 2023, IFF Cleaning Solutions has quickly built a
+            reputation as a trusted provider of residential and commercial
+            cleaning services in Newport News, Virginia (757) 201-2040. Our
+            commitment to excellence and attention to detail has driven our
+            growth and earned us the trust of our clients. We focus on listening
+            to your needs, understanding your requirements, and delivering
+            exceptional cleaning services that exceed expectations.
+          </p>
+          <button
+            class="bg-[#daa533] text-white px-8 py-3 w-full rounded-full hover:bg-[#c89424] transition-colors"
+          >
+            Learn more
+          </button>
         </div>
       </div>
     </div>
