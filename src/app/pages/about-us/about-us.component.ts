@@ -74,7 +74,7 @@ export class AboutUsComponent {
 
   teamMembers: TeamMember[] = [
     {
-      name: 'KARENA TAUEGA',
+      name: 'DAVON IFILL',
       position: 'Coordinator Office Manager',
       image: 'assets/profile-1.jpg',
       socialLinks: {
@@ -83,7 +83,7 @@ export class AboutUsComponent {
       },
     },
     {
-      name: 'PAIGE MORGAN',
+      name: 'FURAHA MOSES',
       position: 'Cleaning Technician',
       image: 'assets/profile-2.jpg',
       socialLinks: {
@@ -92,7 +92,7 @@ export class AboutUsComponent {
       },
     },
     {
-      name: 'CELEINE PARKHILL',
+      name: 'NATETE SANDRA',
       position: 'Cleaning Technical Team Lead',
       image: 'assets/profile-one.jpg',
       socialLinks: {
