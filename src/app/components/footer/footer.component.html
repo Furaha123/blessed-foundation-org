@@ -1,1 +1,148 @@
-<p>footer works!</p>
+<!-- footer.component.html -->
+<footer class="bg-gray-800 text-gray-300 py-16">
+  <!-- Top Section with Contact Info -->
+  <div class="container mx-auto px-4 mb-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+      <div class="flex items-center space-x-4">
+        <div class="rounded-full p-3 border-2 border-amber-500">
+          <img src="assets/phone.svg" alt="phone" class="h-6 w-6" />
+        </div>
+        <div>
+          <div class="text-sm text-gray-400">CALL US TODAY</div>
+          <div class="text-xl">(757) 201 - 2040</div>
+        </div>
+      </div>
+
+      <div class="flex items-center space-x-4">
+        <div class="rounded-full p-3 border-2 border-amber-500">
+          <img src="assets/location.svg" alt="location" class="h-6 w-6" />
+        </div>
+        <div>
+          <div class="text-sm text-gray-400">Newport News</div>
+          <div class="text-xl">Virginia 23602</div>
+        </div>
+      </div>
+
+      <div class="flex items-center space-x-4">
+        <div class="rounded-full p-3 border-2 border-amber-500">
+          <img src="assets/schedule.svg" alt="calculator" class="h-6 w-6" />
+        </div>
+        <div>
+          <div class="text-sm text-gray-400">Do your Schedule</div>
+          <div class="text-xl">Online</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Footer Content -->
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <!-- About Us -->
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-4">ABOUT US</h3>
+        <p class="text-gray-400 mb-4">
+          Founded in 2023 IFILL CLEANING SOLUTIONS quickly built a reputation as one of the
+          leading providers of residential and commercial cleaning solutions.
+        </p>
+        <p class="text-gray-400 mb-4">
+          Our focus is to listen to our clients, understand their needs and
+          provide the exceptional level of cleaning service.
+        </p>
+        <button
+          class="bg-transparent text-amber-500 hover:text-amber-400 transition-colors"
+        >
+          Learn more
+        </button>
+      </div>
+
+      <!-- Our Services -->
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-4">OUR SERVICES</h3>
+        <ul class="space-y-2">
+          <li *ngFor="let service of services">
+            <a
+              href="{{ service.route }}"
+              class="text-gray-400 hover:text-amber-500 transition-colors flex items-center"
+            >
+              <img src="assets/next.svg" alt="arrow" class="h-4 w-4 mr-2" />
+              {{ service.name }}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Latest Posts -->
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-4">LATEST POSTS</h3>
+        <ul class="space-y-4">
+          <li *ngFor="let post of latestPosts">
+            <a href="{{ post.link }}" class="block">
+              <h4 class="text-gray-400 hover:text-amber-500 transition-colors">
+                {{ post.title }}
+              </h4>
+              <p class="text-sm text-gray-500">{{ post.date }}</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h3 class="text-white text-lg font-semibold mb-4">CONTACT INFO</h3>
+        <ul class="space-y-4">
+          <li class="flex items-start space-x-2">
+            <img src="assets/location.svg" alt="location" class="h-6 w-6" />
+            <span class="text-gray-400">Newport News, Virginia, 23602</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <img src="assets/phone.svg" alt="phone" class="h-6 w-6" />
+            <span class="text-gray-400">(757) 201 - 2040 </span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <img src="assets/envelop.svg" alt="email" class="h-6 w-6" />
+            <span class="text-gray-400">{{ email }}</span>
+          </li>
+
+          <li class="flex items-center space-x-2">
+            <img src="assets/clock.svg" alt="clock" class="h-6 w-6" />
+            <span class="text-gray-400">Mon-Fri: 08.00 am - 05.00 pm</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <img src="assets/clock.svg" alt="clock" class="h-6 w-6" />
+            <span class="text-gray-400">Saturday, Sunday: closed</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Social Links & Copyright -->
+    <div
+      class="mt-12 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center"
+    >
+      <p class="text-gray-400 mb-4 md:mb-0">
+        © Copyright {{ currentYear }} IFILL CLEANING SOLUTIONS BY FDEV
+      </p>
+      <div class="flex space-x-4">
+        <a
+          href="#"
+          class="p-2 rounded-full bg-gray-700 text-gray-400 hover:bg-amber-500 hover:text-white transition-colors"
+        >
+          <img src="assets/twitter.svg" alt="twitter" class="h-5 w-5" />
+        </a>
+        <a
+          href="#"
+          class="p-2 rounded-full bg-gray-700 text-gray-400 hover:bg-amber-500 hover:text-white transition-colors"
+        >
+          <img src="assets/facebook.svg" alt="facebook" class="h-5 w-5" />
+        </a>
+        <a
+          href="#"
+          class="p-2 rounded-full bg-gray-700 text-gray-400 hover:bg-amber-500 hover:text-white transition-colors"
+        >
+          <img src="assets/linkedin.svg" alt="linkedin" class="h-5 w-5" />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
