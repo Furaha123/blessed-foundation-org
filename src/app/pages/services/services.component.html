@@ -10,7 +10,7 @@
       <ng-container *ngFor="let service of serviceLinks">
         <div
           (click)="selectService(service)"
-          class="flex items-center justify-between p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+          class="flex items-center justify-between p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer"
           [class.bg-amber-500]="service.name === selectedService.name"
           [class.text-white]="service.name === selectedService.name"
         >

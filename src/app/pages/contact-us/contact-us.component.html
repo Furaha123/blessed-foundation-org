@@ -1,1 +1,85 @@
-<p>contact-us works!</p>
+<div class="container mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <h1 class="text-3xl md:text-4xl font-bold text-[#daa533] mb-4">
+      Please call now:(757) 201 - 2040
+    </h1>
+    <p class="text-gray-600">or send us a message</p>
+  </div>
+
+  <form
+    [formGroup]="contactForm"
+    (ngSubmit)="onSubmit()"
+    class="grid grid-cols-1 md:grid-cols-2 gap-6"
+  >
+    <!-- Left Column -->
+    <div class="space-y-6">
+      <div>
+        <input
+          type="text"
+          formControlName="name"
+          placeholder="YOUR NAME"
+          class="w-full p-4 border border-gray-200 focus:border-amber-500 outline-none transition-colors"
+          [ngClass]="{
+            'border-red-500':
+              contactForm.get('name')?.touched &&
+              contactForm.get('name')?.invalid
+          }"
+        />
+      </div>
+
+      <div>
+        <input
+          type="email"
+          formControlName="email"
+          placeholder="YOUR EMAIL"
+          class="w-full p-4 border border-gray-200 focus:border-amber-500 outline-none transition-colors"
+          [ngClass]="{
+            'border-red-500':
+              contactForm.get('email')?.touched &&
+              contactForm.get('email')?.invalid
+          }"
+        />
+      </div>
+
+      <div>
+        <input
+          type="tel"
+          formControlName="phone"
+          placeholder="YOUR PHONE"
+          class="w-full p-4 border border-gray-200 focus:border-amber-500 outline-none transition-colors"
+          [ngClass]="{
+            'border-red-500':
+              contactForm.get('phone')?.touched &&
+              contactForm.get('phone')?.invalid
+          }"
+        />
+      </div>
+    </div>
+
+    <!-- Right Column -->
+    <div>
+      <textarea
+        formControlName="message"
+        placeholder="MESSAGE"
+        rows="8"
+        class="w-full p-4 border border-gray-200 focus:border-amber-500 outline-none transition-colors resize-none h-full"
+        [ngClass]="{
+          'border-red-500':
+            contactForm.get('message')?.touched &&
+            contactForm.get('message')?.invalid
+        }"
+      ></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="md:col-span-2 flex justify-center">
+      <button
+        type="submit"
+        [disabled]="!contactForm.valid"
+        class="bg-[#(757) 201 - 2040 ] text-white font-bold py-6 px-14 rounded-full bg-[#daa533] hover:bg-amber-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+      >
+        Send message
+      </button>
+    </div>
+  </form>
+</div>
