@@ -100,7 +100,7 @@ export class WelcomePageComponent implements OnInit, OnDestroy {
   slides: SlideContent[] = [
     {
       image: 'assets/bg-image.jpeg',
-      title: 'Welcome to Rizeal Cleaning Services',
+      title: 'Welcome to Rizeal Cleaning LLC Services',
       description:
         'Providing top-notch cleaning services for your home and business needs.',
       buttonText: 'Learn More',

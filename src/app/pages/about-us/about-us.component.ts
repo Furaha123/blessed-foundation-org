@@ -76,7 +76,7 @@ export class AboutUsComponent {
     {
       name: 'DAVON IFILL',
       position: 'Coordinator Office Manager',
-      image: 'assets/profile-1.jpg',
+      image: 'assets/ifill-profile.jpg',
       socialLinks: {
         twitter: '#',
         linkedin: '#',

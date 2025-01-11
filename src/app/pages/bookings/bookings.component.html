@@ -1,0 +1,271 @@
+<section class="bg-gray-50 min-h-screen py-12">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        Book Your Cleaning Service
+      </h1>
+      <div class="w-32 h-1 bg-[#daa533] mx-auto mb-6"></div>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+        Experience professional cleaning services tailored to your needs. Book
+        your appointment today for a cleaner, healthier space.
+      </p>
+    </div>
+
+    <div class="text-center mb-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-[#daa533] mb-4">
+        Need immediate assistance?
+      </h2>
+      <p class="text-gray-600 mb-2">Call us now:</p>
+      <a
+        href="tel:(757) 201-2040"
+        class="text-3xl font-bold text-gray-900 hover:text-[#daa533] transition-colors"
+      >
+        (757) 201-2040
+      </a>
+    </div>
+
+    <div class="max-w-5xl mx-auto rounded-sm p-8">
+      <h3 class="text-2xl font-semibold text-gray-900 mb-6 text-center">
+        Schedule Your Service
+      </h3>
+
+      <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()" class="space-y-8">
+        <div class="bg-gray-50 p-6 rounded-lg mb-8">
+          <h4 class="text-lg font-semibold text-gray-900 mb-4">
+            1. Select Your Service
+          </h4>
+          <select
+            formControlName="service"
+            class="w-full p-4 border border-gray-200 rounded-lg focus:border-[#daa533] focus:ring-2 focus:ring-[#daa533] focus:ring-opacity-50 outline-none transition-colors"
+            [ngClass]="{
+              'border-red-500':
+                bookingForm.get('service')?.touched &&
+                bookingForm.get('service')?.invalid
+            }"
+          >
+            <option value="">Choose a Service</option>
+            <option *ngFor="let service of services" [value]="service">
+              {{ service }}
+            </option>
+          </select>
+        </div>
+
+        <div class="bg-gray-50 p-6 rounded-lg mb-8">
+          <h4 class="text-lg font-semibold text-gray-900 mb-4">
+            2. Your Contact Information
+          </h4>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2"
+                >Name</label
+              >
+              <input
+                type="text"
+                formControlName="name"
+                placeholder="Full Name"
+                class="w-full p-4 border border-gray-200 rounded-lg focus:border-[#daa533] focus:ring-2 focus:ring-[#daa533] focus:ring-opacity-50 outline-none transition-colors"
+                [ngClass]="{
+                  'border-red-500':
+                    bookingForm.get('name')?.touched &&
+                    bookingForm.get('name')?.invalid
+                }"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2"
+                >Email</label
+              >
+              <input
+                type="email"
+                formControlName="email"
+                placeholder="Email Address"
+                class="w-full p-4 border border-gray-200 rounded-lg focus:border-[#daa533] focus:ring-2 focus:ring-[#daa533] focus:ring-opacity-50 outline-none transition-colors"
+                [ngClass]="{
+                  'border-red-500':
+                    bookingForm.get('email')?.touched &&
+                    bookingForm.get('email')?.invalid
+                }"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2"
+                >Phone</label
+              >
+              <input
+                type="tel"
+                formControlName="phone"
+                placeholder="Phone Number"
+                class="w-full p-4 border border-gray-200 rounded-lg focus:border-[#daa533] focus:ring-2 focus:ring-[#daa533] focus:ring-opacity-50 outline-none transition-colors"
+                [ngClass]="{
+                  'border-red-500':
+                    bookingForm.get('phone')?.touched &&
+                    bookingForm.get('phone')?.invalid
+                }"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 p-6 rounded-lg mb-8">
+          <h4 class="text-lg font-semibold text-gray-900 mb-4">
+            3. Service Location
+          </h4>
+          <div class="grid grid-cols-1 gap-6">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2"
+                >Street Address</label
+              >
+              <input
+                type="text"
+                formControlName="address"
+                placeholder="Street Address"
+                class="w-full p-4 border border-gray-200 rounded-lg focus:border-[#daa533] focus:ring-2 focus:ring-[#daa533] focus:ring-opacity-50 outline-none transition-colors"
+                [ngClass]="{
+                  'border-red-500':
+                    bookingForm.get('address')?.touched &&
+                    bookingForm.get('address')?.invalid
+                }"
+              />
+            </div>
+            <div class="grid grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >City</label
+                >
+                <input
+                  type="text"
+                  formControlName="city"
+                  placeholder="City"
+                  class="w-full p-4 border border-gray-200 rounded-lg focus:border-[#daa533] focus:ring-2 focus:ring-[#daa533] focus:ring-opacity-50 outline-none transition-colors"
+                  [ngClass]="{
+                    'border-red-500':
+                      bookingForm.get('city')?.touched &&
+                      bookingForm.get('city')?.invalid
+                  }"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >ZIP Code</label
+                >
+                <input
+                  type="text"
+                  formControlName="zipCode"
+                  placeholder="ZIP Code"
+                  class="w-full p-4 border border-gray-200 rounded-lg focus:border-[#daa533] focus:ring-2 focus:ring-[#daa533] focus:ring-opacity-50 outline-none transition-colors"
+                  [ngClass]="{
+                    'border-red-500':
+                      bookingForm.get('zipCode')?.touched &&
+                      bookingForm.get('zipCode')?.invalid
+                  }"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scheduling -->
+        <div class="bg-gray-50 p-6 rounded-lg mb-8">
+          <h4 class="text-lg font-semibold text-gray-900 mb-4">
+            4. Preferred Schedule
+          </h4>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2"
+                >Preferred Date</label
+              >
+              <input
+                type="date"
+                id="preferredDate"
+                formControlName="preferredDate"
+                class="w-full p-4 border border-gray-200 rounded-lg focus:border-[#daa533] focus:ring-2 focus:ring-[#daa533] focus:ring-opacity-50 outline-none transition-colors"
+                [ngClass]="{
+                  'border-red-500':
+                    bookingForm.get('preferredDate')?.touched &&
+                    bookingForm.get('preferredDate')?.invalid
+                }"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2"
+                >Preferred Time</label
+              >
+              <select
+                formControlName="preferredTime"
+                class="w-full p-4 border border-gray-200 rounded-lg focus:border-[#daa533] focus:ring-2 focus:ring-[#daa533] focus:ring-opacity-50 outline-none transition-colors"
+                [ngClass]="{
+                  'border-red-500':
+                    bookingForm.get('preferredTime')?.touched &&
+                    bookingForm.get('preferredTime')?.invalid
+                }"
+              >
+                <option value="">Select Time</option>
+                <option *ngFor="let timeSlot of timeSlots" [value]="timeSlot">
+                  {{ timeSlot }}
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Special Instructions -->
+        <div class="bg-gray-50 p-6 rounded-lg mb-8">
+          <h4 class="text-lg font-semibold text-gray-900 mb-4">
+            5. Additional Information
+          </h4>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2"
+              >Special Instructions or Requests</label
+            >
+            <textarea
+              formControlName="specialInstructions"
+              rows="4"
+              placeholder="Any special instructions or requests..."
+              class="w-full p-4 border border-gray-200 rounded-lg focus:border-[#daa533] focus:ring-2 focus:ring-[#daa533] focus:ring-opacity-50 outline-none transition-colors resize-none"
+            ></textarea>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="flex justify-center">
+          <button
+            type="submit"
+            class="bg-[#daa533] text-white font-bold py-4 px-12 rounded-full hover:bg-amber-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-[#daa533] focus:ring-opacity-50"
+          >
+            <span *ngIf="!isSubmitting">Book Now</span>
+            <span *ngIf="isSubmitting" class="flex items-center">
+              <svg
+                class="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  class="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  stroke-width="4"
+                ></circle>
+                <path
+                  class="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                ></path>
+              </svg>
+              Processing...
+            </span>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div class="max-w-4xl mx-auto mt-12 text-center">
+      <p class="text-gray-600">
+        After submitting your booking, we'll confirm your appointment within 24
+        hours. For urgent requests, please call us directly.
+      </p>
+    </div>
+  </div>
+</section>
