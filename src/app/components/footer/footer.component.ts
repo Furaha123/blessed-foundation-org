@@ -48,5 +48,5 @@ export class FooterComponent {
   ];
 
   currentYear = new Date().getFullYear();
-  email = 'paulionifill@gmail.com';
+  email = 'rizealcleaning@gmail.com';
 }

@@ -75,28 +75,10 @@ export class AboutUsComponent {
   teamMembers: TeamMember[] = [
     {
       name: 'DAVON IFILL',
-      position: 'Coordinator Office Manager',
+      position: 'OWNER ',
       image: 'assets/ifill-profile.jpg',
       socialLinks: {
         twitter: '#',
-        linkedin: '#',
-      },
-    },
-    {
-      name: 'FURAHA MOSES',
-      position: 'Cleaning Technician',
-      image: 'assets/profile-2.jpg',
-      socialLinks: {
-        facebook: '#',
-        twitter: '#',
-      },
-    },
-    {
-      name: 'NATETE SANDRA',
-      position: 'Cleaning Technical Team Lead',
-      image: 'assets/profile-one.jpg',
-      socialLinks: {
-        instagram: '#',
         linkedin: '#',
       },
     },
