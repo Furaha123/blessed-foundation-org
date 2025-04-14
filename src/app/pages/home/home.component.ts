@@ -3,64 +3,79 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css',
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
+  ceoInfo = {
+    name: ' Dr. Emmanuel Steven Kamara',
+    title: 'Our Ceo',
+    image: 'assets/about-me.jpg'
+  };
+
   features = [
     {
-      icon: 'assets/diamond.svg',
-      title: 'SPARKLING CLEAN',
+      icon: 'assets/empowerment.jpg',
+      title: 'Youth Empowerment',
       description:
-        'Your space will shine like a diamond! We ensure every corner is spotless and germ-free, leaving your home sparkling.',
+        'We equip young people with skills, tools, and support systems to elevate their daily lives and unlock their full potential.',
     },
     {
-      icon: 'assets/home.svg',
-      title: 'LEADING TECHNOLOGIES',
+      icon: 'assets/health.png',
+      title: 'Health & Wellness',
       description:
-        'We treat your home with the care it deserves, using advanced tools and safe disinfectants for a healthier environment.',
+        'We address malnutrition, promote mental health, and run HIV/AIDS awareness campaigns through community outreach.',
     },
     {
-      icon: 'assets/umbrella.svg',
-      title: 'INSURED AND BONDED',
+      icon: 'assets/environment.jpg',
+      title: 'Environmental Impact',
       description:
-        'We’ve got you covered! Our insured and bonded team ensures your peace of mind while we care for your space.',
+        'We foster sustainable living practices and lead behavior-change campaigns to protect our environment.',
     },
     {
-      icon: 'assets/clean.svg',
-      title: 'RELIABLE CREWS',
+      icon: 'assets/community.jpg',
+      title: 'Community Engagement',
       description:
-        'Leave it to us! Our trusted crews work with care and consistency to meet all your cleaning needs.',
+        'Through collaboration and compassion, we uplift vulnerable populations and build stronger, more inclusive communities.',
     },
   ];
+
   services = [
     {
-      image: 'assets/commercial.jpg',
-      title: 'COMMERCIAL CLEANING',
+      image: 'assets/education.jpg',
+      title: 'Education Enhancement',
       description:
-        'Only the most skilled professionals for commercial office cleaning.',
+        'Scholarships, literacy programs, and teacher development to ensure learning opportunities for all.',
     },
     {
-      image: 'assets/window-clean.jpg',
-      title: 'WINDOW CLEANING',
+      image: 'assets/healthcare.jpg',
+      title: 'Healthcare Services',
       description:
-        'The highest quality window cleaning service at a competitive price.',
+        'Mobile clinics, preventive care, and infrastructure support to ensure healthier communities.',
     },
     {
-      image: 'assets/resendential.jpg',
-      title: 'RESIDENTIAL CLEANING',
+      image: 'assets/livelihood.jpg',
+      title: 'Livelihood Development',
       description:
-        'Professional home cleaning services tailored to your needs.',
+        'Skills training, entrepreneurship support, and microfinance programs to foster self-reliance.',
     },
     {
-      image: 'assets/deep-cleaning.jpg',
-      title: 'DEEP CLEANING',
+      image: 'assets/inclusion.jpg',
+      title: 'Community Integration',
       description:
-        'Thorough deep cleaning services for a completely refreshed smelling fresh space.',
+        'Inclusive support for children, women, the elderly, and people with disabilities in underserved areas.',
     },
   ];
 
   currentSlide = 0;
+
   onLearnMore() {
-    // Add your navigation or action logic here
+    // Navigate to 'About Us' or 'Programs' page
+  }
+  
+  // Method to navigate to CEO's profile page if needed
+  viewCEOProfile() {
+    // Navigate to CEO profile page or show more information
+    console.log('Viewing CEO profile');
+    // Implementation depends on your routing setup
   }
 }

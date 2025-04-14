@@ -9,6 +9,7 @@ export class NavbarComponent {
   isMenuOpen = false;
   navbarBackground = 'transparent';
   isScrolled = false;
+  showFullNavbar = true; // Track if full navbar (with logo and buttons) should be shown
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
@@ -23,5 +24,6 @@ export class NavbarComponent {
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
     this.isScrolled = scrollTop > 0;
     this.navbarBackground = this.isScrolled ? 'white' : 'transparent';
+    this.showFullNavbar = scrollTop === 0; // Show full navbar only when at the top
   }
 }

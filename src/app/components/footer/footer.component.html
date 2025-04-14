@@ -2,131 +2,119 @@
 <footer class="bg-gray-800 text-gray-300 py-16">
   <!-- Top Section with Contact Info -->
   <div class="container mx-auto px-4 mb-12">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-      <div class="flex items-center space-x-4">
-        <div class="rounded-full p-3 border-2 border-amber-500">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center md:text-left">
+      
+      <!-- Phone Info -->
+      <div class="flex flex-col md:flex-row items-center md:items-start space-y-2 md:space-y-0 md:space-x-4">
+        <div class="rounded-full p-3 border-2 border-amber-500 flex items-center justify-center">
           <img src="assets/phone.svg" alt="phone" class="h-6 w-6" />
         </div>
         <div>
           <div class="text-sm text-gray-400">CALL US TODAY</div>
-          <div class="text-xl">(757) 201 - 2040</div>
+          <div class="text-xl text-white font-semibold">+250 793 440 736</div>
         </div>
       </div>
-
-      <div class="flex items-center space-x-4">
-        <div class="rounded-full p-3 border-2 border-amber-500">
+  
+      <!-- Address Info -->
+      <div class="flex flex-col md:flex-row items-center md:items-start space-y-2 md:space-y-0 md:space-x-4">
+        <div class="rounded-full p-3 border-2 border-amber-500 flex items-center justify-center">
           <img src="assets/location.svg" alt="location" class="h-6 w-6" />
         </div>
         <div>
-          <div class="text-sm text-gray-400">
-            700 Tech Center Pkwy Suite 200-78
-          </div>
-          <div class="text-xl">Newport News, VA 23606</div>
+          <div class="text-sm text-gray-400">Street address:</div>
+          <div class="text-xl text-white font-semibold">15th Street Sinkor, Monrovia, Liberia</div>
         </div>
       </div>
-
-      <div class="flex items-center space-x-4">
-        <div class="rounded-full p-3 border-2 border-amber-500">
-          <img src="assets/schedule.svg" alt="calculator" class="h-6 w-6" />
+  
+      <!-- Schedule Info -->
+      <div class="flex flex-col md:flex-row items-center md:items-start space-y-2 md:space-y-0 md:space-x-4">
+        <div class="rounded-full p-3 border-2 border-amber-500 flex items-center justify-center">
+          <img src="assets/schedule.svg" alt="schedule" class="h-6 w-6" />
         </div>
         <div>
           <div class="text-sm text-gray-400">Do your Schedule</div>
-          <div class="text-xl">Online</div>
+          <div class="text-xl text-white font-semibold">Online</div>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+  
+
+  <!-- Main Footer Content -->
+  <div class="container mx-auto px-4 ">
+    <div class="py-12">
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+          
+          <!-- About Us -->
+          <div>
+            <h3 class="text-white text-lg font-semibold mb-4">ABOUT US</h3>
+            <p class="text-gray-300 mb-4">
+              Founded on <span class="text-white font-medium">August 12, 2024</span> by <span class="text-white font-medium">Dr. Emmanuel Steven Kamara</span>, Blessed Foundation is a Non-Governmental Organization dedicated to transforming lives through youth empowerment, sustainable solutions, and awareness programs.
+            </p>
+            <p class="text-gray-300 mb-6">
+              Our focus is to listen to our clients, understand their needs, and provide an exceptional level of service.
+            </p>
+            <button class="bg-transparent text-amber-400 hover:text-amber-300 transition-colors font-semibold">
+              Learn more
+            </button>
+          </div>
+    
+          <!-- Our Services -->
+          <div>
+            <h3 class="text-white text-lg font-semibold mb-4">OUR SERVICES</h3>
+            <ul class="space-y-3">
+              <li *ngFor="let service of services">
+                <a
+                  href="{{ service.route }}"
+                  class="text-gray-300 hover:text-amber-400 transition-colors flex items-center justify-center md:justify-start"
+                >
+                  <img src="assets/next.svg" alt="arrow" class="h-4 w-4 mr-2" />
+                  {{ service.name }}
+                </a>
+              </li>
+            </ul>
+          </div>
+    
+          <!-- Contact Info -->
+          <div>
+            <h3 class="text-white text-lg font-semibold mb-4">CONTACT INFO</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start justify-center md:justify-start space-x-2">
+                <img src="assets/location.svg" alt="location" class="h-6 w-6" />
+                <span class="text-gray-300">15th Street Sinkor, Monrovia, Liberia</span>
+              </li>
+              <li class="flex items-center justify-center md:justify-start space-x-2">
+                <img src="assets/phone.svg" alt="phone" class="h-6 w-6" />
+                <span class="text-gray-300">(757) 201 - 2040</span>
+              </li>
+              <li class="flex items-center justify-center md:justify-start space-x-2">
+                <img src="assets/envelop.svg" alt="email" class="h-6 w-6" />
+                <span class="text-gray-300">{{ email }}</span>
+              </li>
+              <li class="flex items-center justify-center md:justify-start space-x-2">
+                <img src="assets/clock.svg" alt="clock" class="h-6 w-6" />
+                <span class="text-gray-300">Mon–Fri: 08:00 AM – 05:00 PM</span>
+              </li>
+              <li class="flex items-center justify-center md:justify-start space-x-2">
+                <img src="assets/clock.svg" alt="clock" class="h-6 w-6" />
+                <span class="text-gray-300">Saturday, Sunday: Closed</span>
+              </li>
+            </ul>
+          </div>
+    
         </div>
       </div>
     </div>
-  </div>
-
-  <!-- Main Footer Content -->
-  <div class="container mx-auto px-4">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-      <!-- About Us -->
-      <div>
-        <h3 class="text-white text-lg font-semibold mb-4">ABOUT US</h3>
-        <p class="text-gray-400 mb-4">
-          Founded in 2023 Rizeal Cleaning LLC quickly built a reputation as one
-          of the leading providers of residential and commercial cleaning
-          solutions.
-        </p>
-        <p class="text-gray-400 mb-4">
-          Our focus is to listen to our clients, understand their needs and
-          provide the exceptional level of cleaning service.
-        </p>
-        <button
-          class="bg-transparent text-amber-500 hover:text-amber-400 transition-colors"
-        >
-          Learn more
-        </button>
-      </div>
-
-      <!-- Our Services -->
-      <div>
-        <h3 class="text-white text-lg font-semibold mb-4">OUR SERVICES</h3>
-        <ul class="space-y-2">
-          <li *ngFor="let service of services">
-            <a
-              href="{{ service.route }}"
-              class="text-gray-400 hover:text-amber-500 transition-colors flex items-center"
-            >
-              <img src="assets/next.svg" alt="arrow" class="h-4 w-4 mr-2" />
-              {{ service.name }}
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Latest Posts -->
-      <div>
-        <h3 class="text-white text-lg font-semibold mb-4">LATEST POSTS</h3>
-        <ul class="space-y-4">
-          <li *ngFor="let post of latestPosts">
-            <a href="{{ post.link }}" class="block">
-              <h4 class="text-gray-400 hover:text-amber-500 transition-colors">
-                {{ post.title }}
-              </h4>
-              <p class="text-sm text-gray-500">{{ post.date }}</p>
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Contact Info -->
-      <div>
-        <h3 class="text-white text-lg font-semibold mb-4">CONTACT INFO</h3>
-        <ul class="space-y-4">
-          <li class="flex items-start space-x-2">
-            <img src="assets/location.svg" alt="location" class="h-6 w-6" />
-            <span class="text-gray-400"
-              >700 Tech Center Pkwy Suite 200-78 Newport News, VA 23606</span
-            >
-          </li>
-          <li class="flex items-center space-x-2">
-            <img src="assets/phone.svg" alt="phone" class="h-6 w-6" />
-            <span class="text-gray-400">(757) 201 - 2040 </span>
-          </li>
-          <li class="flex items-center space-x-2">
-            <img src="assets/envelop.svg" alt="email" class="h-6 w-6" />
-            <span class="text-gray-400">{{ email }}</span>
-          </li>
-
-          <li class="flex items-center space-x-2">
-            <img src="assets/clock.svg" alt="clock" class="h-6 w-6" />
-            <span class="text-gray-400">Mon-Fri: 08.00 am - 05.00 pm</span>
-          </li>
-          <li class="flex items-center space-x-2">
-            <img src="assets/clock.svg" alt="clock" class="h-6 w-6" />
-            <span class="text-gray-400">Saturday, Sunday: closed</span>
-          </li>
-        </ul>
-      </div>
-    </div>
+    
 
     <!-- Social Links & Copyright -->
     <div
       class="mt-12 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center"
     >
       <p class="text-gray-400 mb-4 md:mb-0">
-        © Copyright {{ currentYear }} Rizeal Cleaning LLC BY Furaha Moses
+        © Copyright {{ currentYear }} Blessed FOUNDATION BY Furaha Moses
       </p>
       <div class="flex space-x-4">
         <a

@@ -1,19 +1,22 @@
-<div>
+
+<div class="p-8">
   <div class="container mx-auto px-4 py-12">
     <div class="text-center mb-4">
-      <h1 class="text-3xl font-bold">WHY CHOOSE US</h1>
-      <div class="w-36 h-1 bg-[#daa533] mx-auto mt-2"></div>
+      <h1 class="text-3xl font-bold">The Heart Behind Our Mission</h1>
+
+      <div class="w-36 h-1 bg-blessed-purple mx-auto mt-2"></div>
     </div>
+    
     <div class="text-center mb-12">
       <p class="text-gray-700">
-        Choose Rizeal Cleaning LLC in Newport News, Virginia, for reliable,
-        eco-friendly, and professional cleaning services. We ensure your space
-        sparkles with care and precision every time
+        Blessed Foundation is committed to uplifting lives through education, healthcare, and sustainable development.
+        Our programs are designed to empower vulnerable communities with dignity and lasting impact.
       </p>
       <p class="text-gray-700">
-        Choose us because of our reputation for excellence.
+        Choose us for our compassion, integrity, and unwavering dedication to creating a better, more inclusive future for all.
       </p>
     </div>
+    
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
       <div *ngFor="let feature of features" class="text-center p-6">
@@ -25,155 +28,140 @@
     <div
       class="relative text-center text-white py-24"
       style="
-        background-image: url('assets/window-clean.jpg');
+        background-image: url('assets/hands-together.jpg');
         background-size: cover;
-        background-position: center;
-      "
+        background-repeat: no-repeat;"
     >
       <div class="absolute inset-0 bg-black opacity-50"></div>
 
       <div class="relative z-10 container mx-auto px-4">
-        <h2 class="text-3xl font-bold mb-4">NOTHING IS MORE IMPORTANT</h2>
+        <h2 class="text-3xl font-bold mb-4">OUR CORE PRIORITIES</h2>
         <div class="w-36 h-1 bg-[#daa533] mx-auto mb-6"></div>
-        <p class="mb-12">We prioritize the following.</p>
-
+        <p class="mb-12 text-[#FFFFFF]">
+          At Blessed Foundation, we prioritize impact, sustainability, and meaningful community transformation.
+        </p>
+      
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <div class="text-center">
             <img
               src="assets/customer.svg"
-              alt="Customers"
+              alt="People"
               class="w-16 h-16 mx-auto mb-4"
             />
-            <h3 class="text-lg font-bold">OUR CUSTOMERS</h3>
+            <h3 class="text-lg font-bold">EMPOWERING PEOPLE</h3>
+            <p class="text-sm text-[#919191]">
+              We serve vulnerable populations including youth, women, and children—ensuring access to resources and opportunity.
+            </p>
           </div>
-
+      
           <div class="text-center">
             <img
               src="assets/leaf.svg"
               alt="Environment"
               class="w-16 h-16 mx-auto mb-4"
             />
-            <h3 class="text-lg font-bold">THE ENVIRONMENT</h3>
+            <h3 class="text-lg font-bold">SUSTAINABLE IMPACT</h3>
+            <p class="text-sm text-[#919191]">
+              Our programs are rooted in environmental sustainability and long-term community development.
+            </p>
           </div>
-
+      
           <div class="text-center">
             <img
               src="assets/communication.svg"
               alt="Communication"
               class="w-16 h-16 mx-auto mb-4"
             />
-            <h3 class="text-lg font-bold">COMMUNICATION</h3>
+            <h3 class="text-lg font-bold">EFFECTIVE OUTREACH</h3>
+            <p class="text-sm text-[#919191]">
+              We use inclusive communication strategies to reach, educate, and engage those most in need.
+            </p>
           </div>
         </div>
-
-        <p class="mt-12 max-w-4xl mx-auto">
-          Our cleaning services are affordable and our cleaning experts are
-          highly trained. If for any reason you aren't happy with our
-          professional cleaning services, contact
-          <span class="font-extrabold">Rizeal Cleaning LLC</span>. We will come
-          back and clean the specific areas that didn't meet your expectations.
-          Nothing is more important to us than your satisfaction.
+      
+        <p class="mt-12 max-w-4xl mx-auto ">
+          At <span class="font-extrabold text-white">Blessed Foundation</span>, we believe real transformation starts with compassion,
+          collaboration, and a clear mission to serve. Your support powers the change we strive to create every day.
         </p>
       </div>
+      
     </div>
-    <div class="py-16">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold">OUR CLEANING SERVICES</h2>
-          <div class="w-36 h-1 bg-[#daa533] mx-auto mt-2"></div>
-          <p class="mt-4 text-gray-600">
-            Do you wish you had more free time? We can make it happen!
-          </p>
-        </div>
+    
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div
-            *ngFor="
-              let service of services.slice(currentSlide, currentSlide + 3)
-            "
-            class="bg-white rounded-lg overflow-hidden"
-          >
-            <img
-              [src]="service.image"
-              [alt]="service.title"
-              class="w-full h-64 object-cover"
-            />
-            <div class="p-6">
-              <h3 class="text-lg font-bold mb-2 text-center">
-                {{ service.title }}
-              </h3>
-              <div class="w-20 h-1 bg-[#daa533] mx-auto mt-1"></div>
-              <p class="text-gray-600">{{ service.description }}</p>
+    <div class="container mx-auto px-4 py-16">
+      <div class="container mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div class="relative group cursor-pointer">
+            <div class="absolute -inset-1 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
+            <div class="relative overflow-hidden rounded-lg shadow-xl">
+              <img
+                [src]="ceoInfo.image"
+                alt="CEO of Blessed Foundation"
+                class="object-cover w-full h-[500px] transform transition-transform duration-500 group-hover:scale-105"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6">
+                <span class="text-[#daa533] text-sm font-semibold tracking-widest uppercase mb-1">Leadership</span>
+                <h3 class="text-white text-2xl font-bold tracking-wider uppercase">{{ ceoInfo.title }}</h3>
+                <h4 class="text-white text-3xl font-bold mt-1">{{ ceoInfo.name }}</h4>
+                <div class="w-16 h-1 bg-[#daa533] my-4"></div>
+               
+              </div>
+            </div>
+          </div>
+          
+          <!-- Text content with improved styling -->
+          <div class="text-center md:text-left md:pl-6">
+            <span class="text-[#daa533] font-semibold tracking-wider uppercase text-sm">Who We Are</span>
+            <h2 class="text-4xl font-bold mb-4 mt-2 text-gray-800">ABOUT OUR FOUNDATION</h2>
+            
+            <!-- Decorative line with animation -->
+            <div class="relative">
+              <div class="w-24 h-1 bg-[#daa533] mb-8 md:mx-0 mx-auto"></div>
+              <div class="w-12 h-1 bg-[#79C77F] absolute top-0 left-0 md:mx-0 mx-auto transform transition-transform duration-700 group-hover:translate-x-12"></div>
+            </div>
+            
+            <!-- Content with better typography -->
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              <span class="font-medium text-gray-800">Blessed Foundation</span>, founded on <span class="font-medium text-gray-800">August 12, 2024</span> by <span class="font-medium text-gray-800">Dr. Emmanuel Steven Kamara</span>, is a Non-Governmental Organization dedicated to transforming lives through:
+            </p>
+            
+            <ul class="mb-8 text-gray-600 list-none space-y-3">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-[#79C77F] mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Elevating and empowering youth through innovative development programs</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-[#79C77F] mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Combating child malnutrition and poverty through sustainable solutions</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-[#79C77F] mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Creating awareness on HIV/AIDS and mental health through effective communication</span>
+              </li>
+            </ul>
+            
+            <!-- CTA with improved button design -->
+            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 md:mt-8">
+              <button class="bg-[#79C77F] text-white px-8 py-4 rounded-md hover:bg-[#68b66e] transition-colors duration-300 shadow-lg hover:shadow-xl flex items-center justify-center group">
+                <span>Learn More</span>
+                <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+              </button>
+              <button class="border-2 border-[#daa533] text-[#daa533] px-8 py-4 rounded-md hover:bg-[#daa533] hover:text-white transition-colors duration-300 flex items-center justify-center">
+                <span>Our Projects</span>
+              </button>
             </div>
           </div>
         </div>
-
-        <div class="flex justify-center mt-8 gap-2">
-          <button
-            *ngFor="let _ of services; let i = index"
-            [class.bg-[#daa533]]="i === currentSlide / 3"
-            [class.bg-gray-300]="i !== currentSlide / 3"
-            class="w-3 h-3 rounded-full"
-            (click)="currentSlide = i * 2"
-          ></button>
-        </div>
       </div>
-    </div>
-
-    <div class="container mx-auto px-4 py-16">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <!-- Left side - Images grid -->
-        <div class="grid grid-cols-2 gap-4">
-          <div>
-            <img
-              src="assets/about-1.jpg"
-              alt="Upholstery Cleaning"
-              class="w-full h-48 object-cover rounded-lg"
-            />
-          </div>
-          <div>
-            <img
-              src="assets/about-2.jpg"
-              alt="Clean Home Interior"
-              class="w-full h-48 object-cover rounded-lg"
-            />
-          </div>
-          <div>
-            <img
-              src="assets/about.jpg"
-              alt="Window Cleaning"
-              class="w-full h-48 object-cover rounded-lg"
-            />
-          </div>
-          <div>
-            <img
-              src="assets/about-3.jpg"
-              alt="Clean Kitchen"
-              class="w-full h-48 object-cover rounded-lg"
-            />
-          </div>
-        </div>
-
-        <div class="text-center md:text-left">
-          <h2 class="text-3xl font-bold mb-4">ABOUT OUR COMPANY</h2>
-          <div class="w-36 h-1 bg-[#daa533] mb-6 md:mx-0 mx-auto"></div>
-          <h3 class="text-xl mb-6">Exceptional level of cleaning services.</h3>
-          <p class="text-gray-600 mb-8">
-            Founded in 2023,Rizeal Cleaning LLC has quickly built a reputation
-            as a trusted provider of residential and commercial cleaning
-            services in Newport News, Virginia (757) 201-2040. Our commitment to
-            excellence and attention to detail has driven our growth and earned
-            us the trust of our clients. We focus on listening to your needs,
-            understanding your requirements, and delivering exceptional cleaning
-            services that exceed expectations.
-          </p>
-          <button
-            class="bg-[#daa533] text-white px-8 py-3 w-full rounded-full hover:bg-[#c89424] transition-colors"
-          >
-            Learn more
-          </button>
-        </div>
-      </div>
+      
     </div>
   </div>
 </div>

@@ -99,29 +99,43 @@ export class WelcomePageComponent implements OnInit, OnDestroy {
 
   slides: SlideContent[] = [
     {
-      image: 'assets/bg-image.jpeg',
-      title: 'Welcome to Rizeal Cleaning LLC Services',
-      description:
-        'Providing top-notch cleaning services for your home and business needs.',
-      buttonText: 'Learn More',
-      buttonLink: '#',
+      image: 'assets/together.jpg',
+      title: 'Together We Build Hope',
+      description: 'Empowering communities through love, care, and support.',
+      buttonText: 'Join Us',
+      buttonLink: '#get-involved',
     },
     {
-      image: 'assets/bg-image-1.jpeg',
-      title: 'Professional Cleaning Services',
-      description: 'Experience the difference with our expert cleaning team.',
-      buttonText: 'Our Services',
-      buttonLink: '#services',
+      image: 'assets/slide-1.jpg',
+      title: 'Changing Lives Every Day',
+      description: 'From education to health, we’re making a lasting impact.',
+      buttonText: 'Our Programs',
+      buttonLink: '#programs',
     },
     {
-      image: 'assets/bg-image-3.jpg',
-      title: 'Custom Cleaning Solutions',
-      description:
-        'Tailored cleaning plans to meet your specific requirements.',
-      buttonText: 'Get Started',
-      buttonLink: '#contact',
+      image: 'assets/slide-2.jpg',
+      title: 'Be the Light for Someone',
+      description: 'Your support helps us reach more families in need.',
+      buttonText: 'Donate Now',
+      buttonLink: '#donate',
     },
+    {
+      image: 'assets/slide-4.jpg',
+      title: 'Empower Through Education',
+      description: 'With your support, we provide hope, learning, and opportunity to students who need it most.',
+      buttonText: 'Support Now',
+      buttonLink: '#donate',
+    },
+    
+    {
+      image: 'assets/slide-5.jpg',
+      title: 'Together, We Rise Through Education',
+      description: 'This is the impact of your support—smiling faces, empowered minds, and brighter futures.',
+      buttonText: 'Become a Volunteer',
+      buttonLink: '#donate',
+    }    
   ];
+  
 
   ngOnInit() {
     this.startAutoSlide();
@@ -148,7 +162,7 @@ export class WelcomePageComponent implements OnInit, OnDestroy {
     setTimeout(() => {
       this.currentSlide = (this.currentSlide + 1) % this.slides.length;
       this.animationState = true;
-    }, 200);
+    }, 2000);
   }
 
   previousSlide() {
@@ -157,7 +171,7 @@ export class WelcomePageComponent implements OnInit, OnDestroy {
       this.currentSlide =
         (this.currentSlide - 1 + this.slides.length) % this.slides.length;
       this.animationState = true;
-    }, 200);
+    }, 2000);
   }
 
   onManualSlideChange(direction: 'next' | 'prev') {

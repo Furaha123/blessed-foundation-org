@@ -19,16 +19,16 @@ interface BlogPost {
 })
 export class FooterComponent {
   services: ServiceLink[] = [
-    { name: 'Commercial Cleaning', route: '/commercial-cleaning' },
-    { name: 'House Cleaning', route: '/house-cleaning' },
-    { name: 'Move In Out Service', route: '/move-in-out' },
-    { name: 'Post Renovation', route: '/post-renovation' },
-    { name: 'Window Cleaning', route: '/window-cleaning' },
-    { name: 'Green Spaces Maintenance', route: '/green-spaces' },
-    { name: 'Novum Elementum', route: '/novum-elementum' },
-    { name: 'Sicilium Polon', route: '/sicilium-polon' },
+    { name: 'Youth Empowerment Programs', route: '/youth-empowerment' },
+    { name: 'Child Nutrition Support', route: '/child-nutrition' },
+    { name: 'Poverty Alleviation Initiatives', route: '/poverty-alleviation' },
+    { name: 'HIV/AIDS Awareness Campaigns', route: '/hiv-awareness' },
+    { name: 'Mental Health Education', route: '/mental-health' },
+    { name: 'Community Outreach Projects', route: '/community-outreach' },
+    { name: 'Sustainable Development Goals (SDGs)', route: '/sustainable-development' },
+    { name: 'Volunteer & Internship Opportunities', route: '/volunteer-opportunities' },
   ];
-
+  
   latestPosts: BlogPost[] = [
     {
       title: 'How to deep clean your kitchen',
@@ -48,5 +48,5 @@ export class FooterComponent {
   ];
 
   currentYear = new Date().getFullYear();
-  email = 'rizealcleaning@gmail.com';
+  email = 'blessedfoundation45@gmail.com';
 }

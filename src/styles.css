@@ -1,4 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+  }
+}
+
+/* Add custom component styles if needed */
+@layer components {
+  .btn-primary {
+    @apply bg-blessed-green text-white px-8 py-3 rounded hover:bg-opacity-90 transition-all duration-300 font-montserrat font-medium;
+  }
+  
+  .btn-secondary {
+    @apply bg-blessed-yellow text-blessed-black px-8 py-3 rounded hover:bg-opacity-90 transition-all duration-300 font-montserrat font-medium;
+  }
+}

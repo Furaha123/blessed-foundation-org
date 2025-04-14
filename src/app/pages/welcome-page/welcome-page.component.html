@@ -9,45 +9,31 @@
   @slideAnimation
   [@slideAnimation]="animationState"
 >
-  <button
-    @fadeSlide
-    (click)="onManualSlideChange('prev')"
-    class="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 border-2 border-white rounded-full hover:bg-white/20 transition-all duration-300 z-10"
-  >
-    <img src="assets/previous.svg" alt="Previous" class="w-8 h-8" />
-  </button>
+ 
 
   <div class="absolute inset-0 flex items-center justify-center">
     <div class="text-white text-center max-w-4xl px-4">
       <h1
         @titleAnimation
-        class="text-4xl md:text-6xl font-bold mb-4 transition-all duration-500"
+        class="text-4xl  font-bold mb-4 transition-all duration-500"
       >
         {{ slides[currentSlide].title }}
       </h1>
       <p
         @descriptionAnimation
-        class="text-lg md:text-xl mb-8 transition-all duration-500"
+        class="text-lg md:text-lg mb-8 transition-all duration-500"
       >
         {{ slides[currentSlide].description }}
       </p>
       <a
         @buttonAnimation
         [href]="slides[currentSlide].buttonLink"
-        class="bg-[#56b665] text-[#fffff] font-bold py-6 px-14 rounded-full transition-all duration-300 inline-block hover:bg-[#4a9d57] hover:scale-105"
+        class="bg-blessed-green text-[#fffff] font-bold px-8 py-3 rounded-sm transition-all duration-300 inline-block hover:bg-[#4a9d57] hover:scale-105"
       >
         {{ slides[currentSlide].buttonText }}
       </a>
     </div>
   </div>
-
-  <button
-    @fadeSlide
-    (click)="onManualSlideChange('next')"
-    class="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 border-2 border-white rounded-full hover:bg-white/20 transition-all duration-300 z-10"
-  >
-    <img src="assets/next.svg" alt="Next" class="w-8 h-8" />
-  </button>
 
   <div
     class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2"
