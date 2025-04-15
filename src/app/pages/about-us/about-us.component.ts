@@ -84,9 +84,9 @@ export class AboutUsComponent {
       },
     },
     {
-      name: 'Mr. Prince William’s ',
+      name: 'Mr. Prince Reeves Williams ',
       position: 'Deputy Executive Director',
-      image: 'assets/team-3.jpg',
+      image: 'assets/team-14.jpg',
       socialLinks: {
         twitter: '#',
         linkedin: '#',
